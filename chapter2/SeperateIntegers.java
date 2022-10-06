@@ -8,27 +8,27 @@ public class SeperateIntegers {
         System.out.print("Enter the digit to print seperately :- ");
         Scanner input = new Scanner(System.in);
         int number = input.nextInt();
-        int divider;
+        int divide;
         if ((number > 9999) && (number <= 99999)) {
-            divider = 10000;
+            divide = 10000;
         } else if ((number > 999) && (number <= 9999)) {
-            divider = 1000;
+            divide = 1000;
         } else if ((number > 99) && (number <= 999)) {
-            divider = 100;
+            divide = 100;
         } else if ((number > 9) && (number <= 99)) {
-            divider = 10;
+            divide = 10;
         } else {
-            divider = 1;
+            divide = 1;
         }
-        quotientFinder(number, divider);
+        quotientFinder(number, divide);
     }
 
-        public static void quotientFinder (int numberValue, int dividerValue) {
-            for (int count = 1; dividerValue!= 0; count++){
-                int quotientValue = numberValue / dividerValue;
-                numberValue = numberValue % dividerValue;
+        public static void quotientFinder (int numberValue, int divideValue) {
+            for (int count = 1; divideValue!= 0; count++){
+                int quotientValue = numberValue / divideValue;
+                numberValue = numberValue % divideValue;
                 System.out.printf("%d   ", quotientValue);
-                dividerValue /= 10;
+                divideValue /= 10;
 
 
 
